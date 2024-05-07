@@ -21,6 +21,12 @@ repositories {
 	mavenCentral()
 }
 
+// spring cloud openfeign 의존성 추가 1
+ext {
+	set('springCloudVersion', "2023.0.1")
+}
+
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
@@ -30,6 +36,16 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// spring cloud openfeign 의존성 추가 2
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+}
+
+// spring cloud openfeign 의존성 추가 3
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
 }
 
 tasks.named('test') {
