@@ -39,6 +39,14 @@ dependencies {
 
 	// spring cloud openfeign 의존성 추가 2
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+	// jwt 의존성 추가
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+	// com.sun.xml.bind
+	implementation 'com.sun.xml.bind:jaxb-impl:4.0.1'
+	implementation 'com.sun.xml.bind:jaxb-core:4.0.1'
+	// javax.xml.bind
+	implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
 }
 
 // spring cloud openfeign 의존성 추가 3
