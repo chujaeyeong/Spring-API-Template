@@ -19,6 +19,14 @@ public class HealthCheckController {
 
     @GetMapping("/health")
     public ResponseEntity<HealthCheckResponseDto> healthCheck() {
+
+//        // feign client - read timeout 발생 테스트
+//        try {
+//            Thread.sleep(6000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+
         HealthCheckResponseDto healthCheckResponseDto = HealthCheckResponseDto.builder()
                 .health("ok")
                 .activeProfiles(Arrays.asList(environment.getActiveProfiles()))
