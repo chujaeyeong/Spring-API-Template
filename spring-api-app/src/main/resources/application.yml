@@ -41,3 +41,15 @@ logging:
   level:
     org.hibernate.type: trace # 콘솔창에 조건에 바인딩되는 값 및 조회 결과 출력
     com.app: debug # todo 패키지 수정
+
+# kakao 소셜 로그인 키 정보
+kakao:
+  client:
+    id: ${KAKAO_ID}
+    secret: ${KAKAO_CLIENT_SECRET}
+
+# jwt 토큰 관련 설정
+token:
+  secret: ${JWT_TOKEN_SECRET} # 임의의 문자열
+  access-token-expiration-time: 900000  # 15분 1000(ms) x 60(s) x 15(m)
+  refresh-token-expiration-time: 1209600000 # 2주 1000(ms) x 60 (s) x 60(m) x 24(h) x 14(d)
